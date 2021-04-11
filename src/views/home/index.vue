@@ -4,11 +4,10 @@
         <sidebar class="sidebar-container"></sidebar>
         <!-- 主体 -->
         <div class="main-container hasTagsView">
+            <span @click="aa">{{obj.a}}</span>
             <div>
                 <navbar></navbar>
                 <tags-view></tags-view>
-                <p @click="adda(obj)">{{obj.a}}</p>
-                <p @click="addb(obj)">{{obj.b}}</p>
             </div>
             <app-main></app-main>
         </div>
@@ -21,7 +20,7 @@ export default {
     components:{Sidebar,Navbar,TagsView,AppMain},
     data(){
         return{
-            obj:{}
+            obj:{a:"aa"}
         }
     },
     computed:{
@@ -31,6 +30,10 @@ export default {
         })
     },
     methods:{
+        aa(){
+
+
+        },
         adda(obj){
             obj.a=obj.a+1
         },
@@ -39,14 +42,17 @@ export default {
         },
         async login(){
            
-        }
-
+        },
     },
     created(){
-        this.obj={a:0}
-        this.$set(this.obj,'b',0)
-        console.log(this.obj)
-        this.login();
+
+ 
+
+
+        // this.obj={a:0}
+        // this.$set(this.obj,'b',0)
+        // console.log(this.obj)
+        // this.login();
     }
 }
 </script>
