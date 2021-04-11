@@ -9,7 +9,15 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // icon
-import './icons'
+import './icons';
+
+// 导入全局css
+import '@/assets/css/index.scss';
+
+// vuex  
+import store from './store'
+
+import Cookies from 'js-cookie'
 
 Vue.use(ElementUI);
 
@@ -19,6 +27,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
